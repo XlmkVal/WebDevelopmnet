@@ -1,0 +1,12 @@
+body {
+    background-color: pink;
+}
+#second {
+    background-color: red;
+}
+#thirdSpecial {
+    color: yellow;
+}
+.highlight {
+    text-decoration: line-through;
+}
