@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changing elements</title>
+</head>
+<body>
+    <div>
+        <p id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore rem recusandae nam obcaecati nesciunt quasi, tempora velit adipisci, accusamus quae blanditiis assumenda a aliquid commodi temporibus quaerat aliquam. Cum, eveniet?</p>
+    </div>
+    <div>
+        <p>Iusto consequuntur illum adipisci iste dolor facere, tenetur alias! Id suscipit voluptatibus, repellendus a vitae, beatae excepturi qui tempore at perspiciatis eos maxime reprehenderit? Perspiciatis maiores tempora aliquam saepe dolores.</p>
+    </div>
+    <input type="button" value="PressHere" id="button1">
+    <div>
+        <p id="effect">Quaerat aliquid quo quas distinctio odit nihil labore. Deleniti aut dolores laudantium doloribus mollitia quos culpa repellat magnam repellendus quae veniam, delectus adipisci! Tenetur explicabo error veniam aliquam debitis ut.</p>
+    </div>
+    <input type="button" value="4.94" id="button2">
+    <div>
+        <p id="pressed2">Repudiandae illum, enim fugit voluptatum, nostrum dignissimos aliquid et amet dolores, blanditiis ipsam sapiente! Deleniti officiis necessitatibus earum quos facere corrupti natus corporis, iusto fuga, sequi nobis eum omnis molestias?</p>
+    </div>
+    <button id="style">4.96</button>
+    <div>
+        <p id="changeStyle">Obcaecati suscipit, perferendis magni laudantium saepe sapiente autem voluptates, quia dicta, laboriosam amet? A, commodi doloremque saepe iure itaque tempore, ipsam aperiam laboriosam dicta facere, quae aut voluptatum necessitatibus repudiandae!</p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("text").innerHTML = "<em> This is changed</em>"
+        document.getElementById('button1').onclick = function(){
+            document.getElementById('effect').innerHTML = "<strong> Button was clicked</strong>";
+            alert('Button was clicked');
+        }
+        document.getElementById('button2').onclick = function() {
+            let temp = document.getElementById('pressed2').innerText;
+            if(temp == "Hello Val") {
+                document.getElementById('pressed2').innerText += "It's pressed a second time"
+            } else {
+                document.getElementById('pressed2').innerText = "Hello Val"
+            }
+        }
+        document.getElementById('style').onclick = function(){
+            document.getElementById("changeStyle").style.color = "red";
+        }
+    </script>
+</body>
+</html>
