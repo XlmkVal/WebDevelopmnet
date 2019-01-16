@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        #clicking {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="clicking"></div>
+    <script type="text/javascript">
+        $.get("info.txt", function(data){
+            $("#clicking").after("<p>"+data+"</p>");
+        })
+        $("#clicking").click(function (){$.get("info2.txt", function(data){
+            $("#clicking").append(data);
+        })});
+    </script>
+</body>
+</html>

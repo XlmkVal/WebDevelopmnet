@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ 5.125</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <style>
+        div {
+            float: left;
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+        }
+        .square {
+            background-color: #f00;
+        }
+        #circle {
+            background-color: #00ff00;
+            border-radius: 50%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="square"></div>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <script>
+            $("#circle").click(function() {
+                alert("circle was clicked");
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery UI</title>
+    <style>
+        div {
+            border: 1px solid green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="drag">
+        <p></p>
+    </div>
+    <div id="oneDirection">
+        <p></p>
+    </div>
+    <div id="third">
+        <p></p>
+    </div>
+    <div id="four"></div>
+    <script>
+        $("#drag").draggable();
+        $("#oneDirection").draggable({axis: "x"});
+        $("#third").resizable({
+            grid: "25px",
+            alsoResize: "#four"
+        });
+        $("#four").resizable();
+    </script>
+</body>
+</html>

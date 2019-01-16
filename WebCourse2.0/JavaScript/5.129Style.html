@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changing Styles using JQerry</title>
+    <style>
+        div {
+            float: left;
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+        }
+        .square {
+            background-color: #f00;
+        }
+        #circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #00f;
+        }
+        #div3 {
+            background-color: #000;
+        }
+        #div4 {
+            background-color: #000;
+        }
+        #text {
+            display: none;
+        }
+    </style>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div id="circle"></div>
+    <div id="div3"></div>
+    <p id="text">hello</p>
+    <button id="fadein">Press here</button>
+    <p id="change">This will fade in and out</p>
+    <button id="toggle">press</button>
+    <script type="text/javascript">
+        $("#circle").click(function() {
+            alert("hello")
+            $(this).css("width","100%")
+            $(this).css("background-color","#f00")
+        });
+        $(".square").click(function(){
+            $(this).css("display","none");
+        });
+        $("#div3").click(function(){
+            $(this).hide(3000);
+        });
+        $("#fadein").click(function(){
+            $("#text").fadeIn(4000);
+        });
+        $("#toggle").click(function(){
+            var status = $("#change").css("display");
+            if(status === "block"){
+                $("#change").fadeOut();
+            }   else {
+                $("#change").fadeIn();
+            }
+        })
+    </script>
+</body>
+</html>
