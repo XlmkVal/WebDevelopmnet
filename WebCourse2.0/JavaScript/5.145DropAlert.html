@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #main {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            background-color: #0f0;
+        }
+        #move {
+            background-color: #0ff;
+            width: 100px;
+            height: 100px;
+        }
+        #third {
+            height: 500px;
+            background-color: #000;
+        }
+        #accord h3 {
+            background-color: pink;
+            margin: 0px;
+        }
+        #accord p {
+            background-color: yellow;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <div id="move"></div>
+    <div id="third"></div>
+    <div id="accord">
+        
+            
+                <h3>Order 1</h3><div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, fugit consequuntur. Culpa recusandae suscipit iste quae iure beatae alias blanditiis quidem fugit odio fugiat ad, cumque quos. Beatae, veritatis odio.</p>
+            </div>
+            <h3>Order 2</h3>
+            <div><p>Dignissimos magni, reprehenderit saepe veniam nobis delectus harum rem voluptatum modi hic, repudiandae pariatur impedit nihil vel sapiente sint sequi quis accusantium laborum! Amet expedita sit fugit tenetur cumque fugiat?</p></div>
+            
+                <h3>Order 3</h3><div>
+                <p>Illo pariatur voluptas quas veritatis? Sed esse quibusdam eum nemo, maiores odio, impedit doloribus veniam sunt corrupti sapiente reprehenderit reiciendis cumque, asperiores officia aperiam debitis quia tenetur tempore suscipit? Sunt.</p>
+            </div>
+        
+    </div>
+    <div>
+        <ol id="sortable" >
+            <li class="ui-state-default">This is item 1</li>
+            <li class="ui-state-default">This is item 2</li>
+            <li class="ui-state-default">This is item 3</li>
+            <li class="ui-state-default">This is item 4</li>
+            <li class="ui-state-default">This is item 5</li>
+            <li class="ui-state-default">This is item 6</li>
+            <li class="ui-state-default">This is item 7</li>
+            <li class="ui-state-default">This is item 8</li>
+            <li class="ui-state-default">This is item 9</li>
+        </ol>
+    </div>
+    <script>
+        $("#move").draggable();
+        $("#main").droppable({
+            drop: function(event, ui){
+                alert("done")
+            }
+        })
+        $("#accord").accordion();
+        $("#sortable").sortable();
+    </script>
+</body>
+</html>

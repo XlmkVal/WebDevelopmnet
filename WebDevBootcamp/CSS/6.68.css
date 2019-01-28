@@ -1,0 +1,26 @@
+h2 {
+    font-family: 'Major Mono Display', monospace;
+}
+h3 {
+    color: #5151dd;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+hr {
+    width: 90%;
+    border-color: blueviolet;
+}
+article {
+    max-width: 700px;
+    min-width: 350px;;
+    border: 20px solid #808080;
+    margin: 0 25%;
+    padding: 2.5%;
+}
+p {
+    font-family: 'Pacifico', cursive;
+}
+.comment {
+    border-left: 5px solid #808080;
+    padding: 0 2.5% 0;
+}

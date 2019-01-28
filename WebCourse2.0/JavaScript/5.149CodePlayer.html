@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style>
+        input {
+            padding: 0px;
+            border-left: 1px solid black;
+            border-right: 0px solid black;
+            margin: 0px;
+            float: left;
+            height: 100px;
+            width: calc(25%-2px);
+        }
+        main {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+        body {
+            padding: 0px;
+            margin: 0px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>CodePlayer</h2>
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScrip</div>
+            <div>Output</div>
+        </nav>
+    </header>
+    <main>
+        <input type="text" name="" id="1">
+        <input type="text" name="" id="2">
+        <input type="text" name="" id="">
+        <input type="text" name="" id="">
+        <!-- <textarea name="html" id="html" ></textarea>
+        <textarea name="css" id="css" ></textarea>
+        <textarea name="js" id="js" ></textarea>
+        <textarea name="out" id="out" ></textarea> -->
+    </main>
+    <script>
+        $("#1").keyup(function() {
+            $("#2").val($(this).val());
+        })
+    </script>
+</body>
+</html>
