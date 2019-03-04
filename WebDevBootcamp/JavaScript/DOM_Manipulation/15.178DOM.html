@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM</title>
+    <script src="./15.178.js"></script>
 </head>
 <body>
     <head>
@@ -25,7 +26,15 @@
     </article>
     <footer></footer>
     <script>
-        
+        var foot = document.getElementsByTagName("footer")[0];
+        foot.innerHTML = '<a href="https://www.google.com">google</a><button type="submit" id="pressing">press</button>'
+        // now we will change the href of the footer a
+        var anchor = document.getElementsByTagName("a")[0];
+        anchor.id = "searchEngine";
+        // creating an event listener for clicks on the new button, so the search engine we redirect to is DuckDuckGo
+        document.getElementById("pressing").addEventListener("click", function(){
+            document.querySelector("#searchEngine").setAttribute("href", "https://duckduckgo.com")
+        })
     </script>
 </body>
 </html>
