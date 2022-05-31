@@ -1,0 +1,49 @@
+name{
+    key: value
+}
+
+Units:
+    px - pixels
+    em - relative to the parent element
+    rem - relative to the document root 
+    % - percentage compared to the parent element
+Colors:
+    # - starts the RGB value, goes #RRGGBB
+        0-9, A-F
+        shorthand is #RGB if the both values for a color match
+    rgb(R,G,B) - uses 0-255 for each
+    rgba(R,G,B,A) - adds opaque value 
+
+Selecting:
+    p - one element
+    p, strong - multiple elements
+    p strong - all elements within the paragraph, using space as separator
+    #name - selecting id
+    .name - selecting class 
+    a:hover - sudo selector for something that happens
+    :nth-child - can use even, odd
+    :nth-last-child() - same as nth-child, but starts from the back.
+    :first-of-type
+    :nth-of-type() - can use even, odd
+    :only-of-type
+    :empty
+    [attribute]
+        ^= - to start 
+        $= - end with 
+        *= - contains
+
+
+    display - change has the elements are displayed - inline, block, etc.
+    position - relative, absolute, fixed
+        relative - allows you to say where it should be positioned based on the standard position
+        absolute - takes it out of the normal flow
+        fixed - fixes it to the page viewport
+    text-align
+    overflow
+
+Clearfix:
+
+Reset files:
+    normalizes everything for diferent browsers.
+
+Specificity - how the rules apply

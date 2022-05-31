@@ -1,0 +1,36 @@
+button:hover {
+    color: #afdb83;
+}
+
+a {
+    color: pink;
+}
+
+a:hover {
+    color: green;
+}
+
+#toleft {
+    display: block;
+    width: 110px;
+    float: left;
+}
+#toright {
+    display: block;
+    width: 110px;
+    float: right; 
+}
+
+#div1 {
+    background-color: yellow;
+    position: relative;
+    top: 123px;
+    right: -300px; 
+}
+
+#div2 {
+    background-color: green;
+    position: absolute;
+    top: 123px;
+    right: 300px; 
+}
